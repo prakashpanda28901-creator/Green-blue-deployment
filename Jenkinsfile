@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Run Tests") {
             steps {
-                sh "python -m unittest"
+                sh "python3 -m unittest"
             }
         }
         stage("Deploy Green Environment") {
