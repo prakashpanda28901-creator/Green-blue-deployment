@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git ''
+                git 'https://github.com/prakashpanda28901-creator/Green-blue-deployment.git'
             }
         }
         stage('Build docker Image'){
