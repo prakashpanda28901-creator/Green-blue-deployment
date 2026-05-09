@@ -22,7 +22,7 @@ pipeline {
         }
         stage("Deploy Green Environment") {
             steps {
-                sh " " "
+                sh '''
                 docker stop green || true
                 docker rm green || true
                 
@@ -30,7 +30,7 @@ pipeline {
                 --name green \
                 -p 5001:5000
                 bluegreen-app
-                " " "
+                '''
             }
         }
         stage('Health Check') {
